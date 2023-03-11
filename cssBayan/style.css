@@ -1,0 +1,12 @@
+.item-mem, input{
+    display: none;
+}
+
+.item:hover .item-mem{
+    display: block;
+}
+
+input:checked ~ .item-mem{
+    display: block;
+}
+
