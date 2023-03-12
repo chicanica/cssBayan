@@ -1,12 +1,111 @@
-.item-mem, input{
+html{
+    scrollbar-gutter: stable;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.accordion{
+    box-sizing: border-box;
+    height: 100%;
+    width: 60vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 3rem;
+    margin: 3rem 0 1rem 0;
+}
+
+.items, .item, p{
+    padding: 0;
+    margin: 0;
+}
+
+.items{
+    list-style: none;
+    cursor: pointer;
+}
+
+.item{
+    border-top: 0.1rem solid grey;
+}
+
+input{
     display: none;
 }
 
-.item:hover .item-mem{
-    display: block;
+label{
+    font-size: 2rem;
+    color: deeppink;
+    display: flex;
+    flex-direction: column;
+    transition: color 0.5s;
+    height: 4rem;
+    overflow: hidden;
 }
 
-input:checked ~ .item-mem{
-    display: block;
+input:checked ~ label, .item:hover label{
+    height: 21rem;
+    color: black;
 }
+
+.accordion:hover label{
+    color: black;
+}
+
+.item-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.icon svg{
+    height: 2rem;
+    width: 2rem;
+}
+
+.icon{
+    display: block;
+    visibility: hidden;
+    transition: transform 0.5s, visibility 0.5s;
+}
+
+.accordion:hover .icon{
+    visibility: visible;
+}
+
+input:checked ~ label .icon{
+    transform: rotate(45deg);
+}
+
+.item .item-mem img{
+    width: 100%;
+    height: auto;
+}
+
+.item-mem{
+    align-self: center;
+    padding: 0;
+    margin: 0 0 1rem;
+    width: 14rem;
+    transition: width 0.5s;
+}
+
+input:checked ~ label .item-mem, .item:hover .item-mem{
+    width: 15rem;
+}
+
+
+
+
+
+
+
+
 
