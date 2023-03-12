@@ -5,20 +5,15 @@ html{
 body{
     margin: 0;
     padding: 0;
+    cursor: default;
 }
 
 .accordion{
     box-sizing: border-box;
     height: 100%;
-    width: 60vw;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-}
-
-h1{
-    font-size: 3rem;
-    margin: 3rem 0 1rem 0;
 }
 
 .items, .item, p{
@@ -28,7 +23,6 @@ h1{
 
 .items{
     list-style: none;
-    cursor: pointer;
 }
 
 .item{
@@ -40,17 +34,15 @@ input{
 }
 
 label{
-    font-size: 2rem;
     color: deeppink;
     display: flex;
     flex-direction: column;
     transition: color 0.5s;
-    height: 4rem;
     overflow: hidden;
+    cursor: pointer;
 }
 
 input:checked ~ label, .item:hover label{
-    height: 21rem;
     color: black;
 }
 
@@ -62,12 +54,6 @@ input:checked ~ label, .item:hover label{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem 0;
-}
-
-.icon svg{
-    height: 2rem;
-    width: 2rem;
 }
 
 .icon{
@@ -93,15 +79,119 @@ input:checked ~ label .icon{
     align-self: center;
     padding: 0;
     margin: 0 0 1rem;
-    width: 14rem;
     transition: width 0.5s;
 }
 
-input:checked ~ label .item-mem, .item:hover .item-mem{
-    width: 15rem;
+@media (min-width: 1920px)  {
+    .accordion {
+        width: 60vw;
+    }
+
+    h1{
+        font-size: 5rem;
+        margin: 5rem 0 2rem 0;
+    }
+
+    label{
+        font-size: 4rem;
+        height: 7rem;
+    }
+
+    input:checked ~ label, .item:hover label {
+        height: 35rem;
+    }
+
+    .item-title {
+        margin: 1.5rem 0;
+    }
+
+    .icon svg{
+        height: 4rem;
+        width: 4rem;
+    }
+
+    .item-mem{
+        width: 24rem;
+    }
+
+    input:checked ~ label .item-mem, .item:hover .item-mem{
+        width: 25rem;
+    }
 }
 
+@media (min-width: 820px) and (max-width: 1919px) {
+    .accordion {
+        width: 60vw;
+    }
 
+    h1{
+        font-size: 3rem;
+        margin: 3rem 0 1rem 0;
+    }
+
+    label{
+        font-size: 2rem;
+        height: 4rem;
+    }
+
+    input:checked ~ label, .item:hover label {
+        height: 26rem;
+    }
+
+    .item-title {
+        margin: 1rem 0;
+    }
+
+    .icon svg{
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .item-mem{
+        width: 19rem;
+    }
+
+    input:checked ~ label .item-mem, .item:hover .item-mem{
+        width: 20rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 819px){
+    .accordion {
+        width: 80vw;
+    }
+
+    h1{
+        font-size: 2rem;
+        margin: 2rem 0 0.5rem 0;
+    }
+
+    label{
+        font-size: 1.5rem;
+        height: 2.5rem;
+    }
+
+    input:checked ~ label, .item:hover label {
+        height: 17rem;
+    }
+
+    .item-title {
+        margin: 0.5rem 0;
+    }
+
+    .icon svg{
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .item-mem{
+        width: 12rem;
+    }
+
+    input:checked ~ label .item-mem, .item:hover .item-mem{
+        width: 13rem;
+    }
+}
 
 
 
